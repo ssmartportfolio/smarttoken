@@ -134,24 +134,6 @@ contract BasicToken is ERC20Basic {
 
 }
 
-/**
- * @title ERC20 interface
- * @dev see https://github.com/ethereum/EIPs/issues/20
- */
-contract ERC20 is ERC20Basic {
-  function allowance(address owner, address spender)
-    public view returns (uint256);
-
-  function transferFrom(address from, address to, uint256 value)
-    public returns (bool);
-
-  function approve(address spender, uint256 value) public returns (bool);
-  event Approval(
-    address indexed owner,
-    address indexed spender,
-    uint256 value
-  );
-}
 
 
 
@@ -490,8 +472,8 @@ contract SPTToken is PausableToken, BurnableToken {
    * @dev Constructor that gives msg.sender all of existing tokens. 
    */
   function SPTToken() {   
-    totalSupply = 1000000000 * 10**uint256(decimals); //make sure decimals is typecast to uint256
-    balances[msg.sender] = totalSupply;
+    totalSupply_ = 1000000000 * 10**uint256(decimals); //make sure decimals is typecast to uint256
+    balances[msg.sender] = totalSupply_;
   }
  
 }
