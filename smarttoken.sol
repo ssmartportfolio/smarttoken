@@ -463,8 +463,8 @@ contract BurnableToken is BasicToken {
  **/
 contract SPTToken is PausableToken, BurnableToken {
   string public constant version = "1.0";
-  string public constant name = "XYZ Token";
-  string public constant symbol = "XYZ";
+  string public constant name = "Smart Portfolio Token";
+  string public constant symbol = "SPT";
   uint8 public constant decimals = 18;
     
     
